@@ -53,3 +53,17 @@ const io = new IntersectionObserver(hiddenNav);
 io.observe(inform);
 
 
+//封面轮播图
+let carousel = document.querySelector("#carousel");
+let iteams = carousel.children;
+let index = 0;
+setInterval(function () {    
+    iteams[index].className = ""
+    if (index == iteams.length - 1) {
+        index = -1
+    }
+    index ++
+    iteams[index].className = 'activeImg'
+}, 6000)
+
+

@@ -84,7 +84,7 @@ nav{
 }
 
 #home-img{
-    background: url(./sourse/images/background.jpg);
+    /*background: url(./sourse/images/background.jpg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,6 +95,35 @@ nav{
     top: 0;
     width: 100vw;
     z-index: -1;
+}
+#home-img li{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*visibility: hidden;*/
+    opacity: 0;
+    /*transform: scale(1, 1);*/
+    transition: opacity 1s ease-out, transform 10s ease-out;
+}
+#home-img li img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+#carousel{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#carousel li.activeImg{
+    /*visibility: visible;*/
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+    transition: opacity 1s ease-out, transform 5.5s ease-out;
 }
 #home{
     display: flex;
@@ -125,6 +154,7 @@ nav{
     color: #ffffff;
     margin: 10px auto;
     font-weight: 600;
+    text-shadow: 0 0 10px #000000c0;
 }
 #caver{
     
@@ -308,7 +338,6 @@ i{
     
 }
 
-
 .home-post{
     display: flex;
     justify-content: center;
@@ -323,7 +352,7 @@ i{
 }
 #frank-blog, #Discrible{
     color: aliceblue;
-    text-shadow: 0 0 20px 0px #0000009b;
+    text-shadow: 0 0 10px #000000c0;
     margin: 10px;
 }
 #frank-blog{

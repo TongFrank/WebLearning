@@ -57,6 +57,7 @@ io.observe(inform);
 let carousel = document.querySelector("#carousel");
 let iteams = carousel.children;
 let index = 0;
+iteams[index].className = 'activeImg'
 setInterval(function () {    
     iteams[index].className = ""
     if (index == iteams.length - 1) {
@@ -65,5 +66,12 @@ setInterval(function () {
     index ++
     iteams[index].className = 'activeImg'
 }, 6000)
+
+
+// 导航栏菜单底部动画
+// const activeMenus = document.querySelector('activeMenus')
+// document.addEventListener("click", function(   
+// ))
+
 
 

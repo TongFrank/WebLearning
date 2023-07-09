@@ -185,7 +185,7 @@ nav{
     /* z-index: 3; */
 }
 #Discrible{
-    
+    font-size: 35px;
 }
 
 #time, #date{
@@ -395,8 +395,8 @@ i{
     margin: 10px;
 }
 #frank-blog{
-    font-family: IslandMoments;
-    font-size: 80px;
+    /* font-family: IslandMoments; */
+    font-size: 60px;
 }
 
 

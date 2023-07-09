@@ -47,10 +47,23 @@ function hiddenNav(entries) {
 
 const inform = document.querySelector(".info");
 const navg = document.querySelector("nav");
-// 使用[交叉观察器]
-const io = new IntersectionObserver(hiddenNav);
-// 监控选择器infor
-io.observe(inform);
+
+
+// 监控鼠标滑动方向控制导航栏显示与隐藏
+let lastScrollTop = 0;
+window.addEventListener("scroll", function(){
+   let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // “||”符号表示或，加入浏览器兼容
+   if (scrollTop > lastScrollTop){
+    // 使用[交叉观察器]
+       const io = new IntersectionObserver(hiddenNav);
+       // 监控选择器infor
+       io.observe(inform);
+    // navg.classList.add('hidden');
+   } else {
+    navg.classList.remove('hidden');
+   }
+   lastScrollTop = scrollTop;
+});
 
 
 //封面轮播图
